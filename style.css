@@ -20,15 +20,6 @@ h3{
 #calculater h3{
     grid-column: 1 / 3; /**/
 }
-/* #copy-txt-div{
-    z-index: 2;
-    width: 0px;
-    height:0px;
-}
-#copy-txt{
-    display:none;
-    margin:48px 0px 0px 33px;
-} */
 #output-1{
     box-sizing: border-box;
     width: 100%;
@@ -77,10 +68,10 @@ h3{
 .button:hover{
     opacity: .7;
 }
-/* .button:focus{ 
-    background:linear-gradient(to top , rgba(255, 51, 0, 0.74), rgba(255, 30, 0, 0.897));
-    color:yellow;
-} */
+.button:focus{
+    background-color:rgb(255, 38, 0);
+    color:rgb(235, 235, 235);
+}
 .result{
     grid-column: 3 / 6; /**/
     background-color: #3caea3;
@@ -90,11 +81,6 @@ h3{
 .multiplication , .subtraction{
     background-color: #3caea3;
     color: #f6d55c;
-}
-.trans:focus, .Addition:focus , .division:focus,
-.multiplication:focus ,.subtraction:focus{
-    color: #f6d55c;
-    background-color: #3caea3;
 }
 .trans{
     background-color: #359c92ab;

@@ -19,8 +19,6 @@ let change_output1_to = (value) => output1.setAttribute('value', value);
 let add_to_output2 = (value) => output2.setAttribute('value', output2.getAttribute('value') + " " + value);
 let change_output2_to = (value) => output2.setAttribute('value', value);
 let delete_char_output2 = () => change_output2_to(output2.getAttribute('value').substring(0, output2.getAttribute('value').length - 1));
-// let close = ()=>copy_txt.style.display ="none";
-// copy_txt.style.display ="none";
 add_to_output1(0);
 change_output2_to('');
 let isOperation = (input) => {
@@ -30,7 +28,7 @@ let isOperation = (input) => {
 };
 calculater.addEventListener('click', (event) => {
     try {
-        let value = (event.target.value);/*copy_txt.style.display = "block"; window.setTimeout(close(),25000);*/
+        let value = (event.target.value);
         if (event.target.id == 'output-1') { event.target.select(); document.execCommand('copy'); return; }; // if user press on the output screen will copy the content.
         if (output1.getAttribute('value') == "0" && ((opr1 == "÷" && nmb1 != undefined) || (opr2 == "÷" && nmb2 != undefined))) { change_output1_to("ERROR"); to_clear1 = true; alert('divide on zero !!!'); return; }
         if (value == 'C') { change_output1_to('0'); change_output2_to(""); nmb1 = undefined; nmb2 = undefined; opr1 = ""; opr2 = ""; pre_btn = undefined; }//All Clear
