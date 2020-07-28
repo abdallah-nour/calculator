@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+
+#container{
+    width:80%;
+    margin:auto;
+}
+h3{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 40px;
+    color: #ed553b;
+    margin: 20px 0;
+}
+#calculater{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(5,1fr); /**/
+    grid-gap: 20px; /**/
+}
+#calculater h3{
+    grid-column: 1 / 3; /**/
+}
+/* #copy-txt-div{
+    z-index: 2;
+    width: 0px;
+    height:0px;
+}
+#copy-txt{
+    display:none;
+    margin:48px 0px 0px 33px;
+} */
+#output-1{
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    padding: 35px 0px 10px 7px;
+    border-radius: 10px;
+    border: solid 2px #20639b;
+    margin-right: 100px;
+    grid-column: 1/6;
+    outline: none;
+    font-family:  'Ubuntu', sans-serif;
+    font-size: 29px;
+    cursor: pointer;
+}
+#output-1:focus{ border: solid 3px #75b6eb;}
+#output-2{
+    box-sizing:border-box;
+    position: absolute;
+    padding: 0px 0px 10px -100px;
+    top: 111px;
+    left:5px;
+    width:98%;
+    height: 25px;
+    border:none;
+    border-bottom: 5px #20639b ;
+    grid-column: 1/6; /**/
+    outline: none; 
+    font-family:  'Ubuntu', sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    color:rgb(172, 172, 172);
+    cursor: pointer;
+}
+.button{
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #f6d55c;
+    border: none;
+    outline: none;
+    font-family:  'Ubuntu', sans-serif;
+    font-size: 32px;
+    color: #3caea3;
+    cursor:pointer;
+}
+.button:hover{
+    opacity: .7;
+}
+/* .button:focus{ 
+    background:linear-gradient(to top , rgba(255, 51, 0, 0.74), rgba(255, 30, 0, 0.897));
+    color:yellow;
+} */
+.result{
+    grid-column: 3 / 6; /**/
+    background-color: #3caea3;
+    color: #f6d55c;
+}
+.Addition , .division,
+.multiplication , .subtraction{
+    background-color: #3caea3;
+    color: #f6d55c;
+}
+.trans:focus, .Addition:focus , .division:focus,
+.multiplication:focus ,.subtraction:focus{
+    color: #f6d55c;
+    background-color: #3caea3;
+}
+.trans{
+    background-color: #359c92ab;
+    color: #f6d55c;
+}
+._0 ,._1 ,._2 ,._3 ,._4 ,._5 ,._6 ,._7 ,._8 ,._9, ._dot{
+    background-color: #e4e4e4;
+    color: #ed553b;
+}
+@media (min-width: 900px){  
+    #container{
+        width:55%;
+    }
+}   
