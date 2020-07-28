@@ -9,7 +9,6 @@ let operate = (a, opr, b) => {
         return a / b;
     }
 }
-// let copy_txt = document.getElementById('copy-txt');
 let nmb1 = undefined, nmb2, opr1 = "", opr2 = "", pre_btn, to_clear1 = false, to_clear2 = false;
 let output1 = document.getElementById('output-1'); output1.readOnly = true;
 let output2 = document.getElementById('output-2'); output2.readOnly = true;
@@ -121,7 +120,6 @@ let check = (value) => {
     else if (!(isNaN(value))) { // here when the input is number
         if (to_clear1) { change_output1_to(""); to_clear1 = false; }
         else if (to_clear2) { change_output2_to(""); to_clear2 = false }
-        // else if (output1.getAttribute('value').length == 16) return;
         else if (output1.getAttribute('value') > 9007199254740991) return;
         add_to_output1(value);
     }
